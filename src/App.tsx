@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { preloadGrowthRate } from "./utils/retrieveGrowthRate";
-import PokeLoader from "./components/pokeLoader";
+import LoadingScreen from "./components/loadingScreen/loadingScreen";
+import "./App.css";
 
 export default function App() {
   const [growthRatesCache, setGrowthRatesCache] = useState<Record<string, number[]>>({});
@@ -15,7 +16,16 @@ export default function App() {
     setGrowthRatesCache(growthRates);
   };
 
-  return <PokeLoader />
+  return (
+    <div 
+      className="d-flex justify-content-center align-items-center"
+      style={{
+        height: "100vw"
+      }}
+    >
+      <LoadingScreen />
+    </div>
+  )
 
   return (
     <div>{ JSON.stringify(growthRatesCache) }</div>

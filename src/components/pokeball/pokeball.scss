@@ -1,0 +1,35 @@
+.pokeball-container {
+  position: relative;
+  display: flex;
+  width: fit-content;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  
+  .upper-pokeball {
+    width: 100px;
+    height: 50px;
+    background-color: red;
+    border-top-left-radius: 100px;
+    border-top-right-radius: 100px;
+    border: 3px solid black;
+  }
+
+  .lower-pokeball {
+    width: 100px;
+    height: 50px;
+    background-color: white;
+    border-bottom-left-radius: 100px;
+    border-bottom-right-radius: 100px;
+    border: 3px solid black;
+  }
+
+  .middle-button {
+    position: absolute;
+    height: 30px;
+    width: 30px;
+    background-color: white;
+    border-radius: 30px;
+    border: 3px solid black;
+  }
+}
