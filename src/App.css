@@ -1,4 +1,31 @@
-body {
-  background: linear-gradient(to left, rgb(12, 12, 11), rgb(26, 26, 31));
-  color: #FFF;
+@keyframes fade-in {
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes rotate-pokeball {
+  25% {
+    transform: rotateZ(-20deg);
+  }
+  50% {
+    transform: rotateZ(20deg);
+  }
+  80% {
+    transform: rotateZ(0);
+  }
+}
+
+@keyframes shift-screens-up {
+  to {
+    transform: translateY(-100vh);
+    display: none;
+  }
+}
+
+@keyframes shift-screens-down {
+  to {
+    transform: translateY(100vh);
+    display: none;
+  }
 }
