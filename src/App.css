@@ -1,28 +1,6 @@
-body {
-  background: linear-gradient(to left, rgb(12, 12, 11), rgb(26, 26, 31));
-  color: #FFF;
-}
-
-@keyframes throw-and-bounce {
-  0% {
-    transform: translateY(-200px) scaleY(1.1);
-    opacity: 0;
-  }
-  50% {
+@keyframes fade-in {
+  to {
     opacity: 1;
-    transform: translateX(0) translateY(0) rotate(0deg) scaleY(1);
-  }
-  65% {
-    opacity: 1;
-    transform: translateX(0) translateY(0) scaleX(1.2) scaleY(0.8);
-  }
-  75% {
-    opacity: 1;
-    transform: translateX(0) translateY(-50px) scaleX(0.95) scaleY(1.05);
-  }
-  100% {
-    opacity: 1;
-    transform: translateX(0) translateY(0) scaleX(1) scaleY(1);
   }
 }
 
@@ -35,5 +13,19 @@ body {
   }
   80% {
     transform: rotateZ(0);
+  }
+}
+
+@keyframes shift-screens-up {
+  to {
+    transform: translateY(-100vh);
+    display: none;
+  }
+}
+
+@keyframes shift-screens-down {
+  to {
+    transform: translateY(100vh);
+    display: none;
   }
 }

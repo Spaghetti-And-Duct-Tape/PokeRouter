@@ -5,23 +5,24 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  
-  .upper-pokeball {
-    width: 100px;
-    height: 50px;
-    background-color: red;
-    border-top-left-radius: 100px;
-    border-top-right-radius: 100px;
-    border: 3px solid black;
-  }
 
+  .upper-pokeball,
   .lower-pokeball {
     width: 100px;
     height: 50px;
+    border: 3px solid black;
+  }
+  
+  .upper-pokeball {
+    background-color: red;
+    border-top-left-radius: 100px;
+    border-top-right-radius: 100px;
+  }
+
+  .lower-pokeball {
     background-color: white;
     border-bottom-left-radius: 100px;
     border-bottom-right-radius: 100px;
-    border: 3px solid black;
   }
 
   .middle-button {

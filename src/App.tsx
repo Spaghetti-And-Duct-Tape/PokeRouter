@@ -6,7 +6,7 @@ import "./App.css";
 export default function App() {
   const [growthRatesCache, setGrowthRatesCache] = useState<Record<string, number[]>>({});
   const isGrowthRateEmpty = Object.keys(growthRatesCache).length === 0;
-
+  
   useEffect(() => {
     loadGrowthRateAPI();
   }, []);
@@ -17,17 +17,10 @@ export default function App() {
   };
 
   return (
-    <div 
-      className="d-flex justify-content-center align-items-center"
-      style={{
-        height: "100vw"
-      }}
-    >
-      <LoadingScreen />
-    </div>
-  )
-
-  return (
-    <div>{ JSON.stringify(growthRatesCache) }</div>
+    <>
+      <LoadingScreen
+        loading={ isGrowthRateEmpty } 
+      />
+    </>
   )
 };
