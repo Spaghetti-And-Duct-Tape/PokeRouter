@@ -16,13 +16,24 @@ export default function LoadingScreen({
   return (
     <div 
       className={ `loading-screen ${ loading ? "loading" : "loaded" }` }
+      role="status"
+      aria-live="polite"
+      aria-label="Loading content, please wait"
     >
       <div 
         className="half-screen"
+        data-testid="half-screen"
         onAnimationEnd={ () => setIsLoaded(true) }  
+        aria-hidden="true"
       />
-      <div className="half-screen" />
-      <div className="loader-container">
+      <div 
+        className="half-screen" 
+        aria-hidden="true"
+      />
+      <div 
+        className="loader-container"
+        aria-hidden="true"
+      >
         <div className="loader-animator">
           <PokeBall />
         </div>
